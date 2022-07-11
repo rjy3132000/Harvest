@@ -1,0 +1,1273 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 58.1%; 
+  margin: 0 auto;
+}
+
+h3 {
+  color: rgba(0,0,0,.8);
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+
+
+header .wrapper {
+  padding: 12px 0;
+  width: 96.2%;
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 72%;
+}
+.menu nav li a{
+  padding: 3px 6px;
+  border-radius: 5px;
+  margin: 3px;
+  color: #000;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: .5s ease-in-out;
+}
+
+.menu nav li a.nav_active {
+  color: #ec6642;
+}
+
+.menu .social-links span {
+  display: none;
+}
+
+.social-links li span{
+  display: none;
+}
+.social-links a {
+  padding: 0 2px;
+  color: #db7a5e;
+  font-family: "fontawesome";
+  transition: .5s ease-in-out;
+}
+.social-links li:nth-of-type(1) a:before{
+  content: "\f09a";
+}
+.social-links li:nth-of-type(2) a:before{
+  content: "\f099";
+}
+.social-links li:nth-of-type(3) a:before{
+  content: "\f08c";
+}
+.social-links li:nth-of-type(4) a:before{
+  content: "\f16d";
+}
+
+.hamburg {
+  display: none;
+}
+.hamburg span {
+  display: none;
+}
+.hamburg::before {
+  content: "\f0c9";
+  font-size: 25px;
+  font-family: "fontawesome";
+  cursor: pointer;
+}
+
+
+
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+
+
+
+/* Banner Styling Start From Here */
+.banner .wrapper {
+  width: 100%;
+}
+.slider li {
+  position: relative;
+}
+.bannerText {
+  width: 50%;
+  position: absolute;
+  top: 70%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+.bannerText>div {
+  background-color: #ec6642;
+  color: #f0f0f0;
+}
+.bannerText>div {
+  padding: 2%;
+}
+.bannerText>div h2 {
+  text-transform: uppercase;
+}
+.bannerText>div span {
+  text-transform: uppercase;
+}
+.bannerText>div p {
+  text-transform: capitalize;
+  line-height: 18px;
+  letter-spacing: 1.2px;
+}
+.bannerText a{
+  padding: 1% 4% 1% 1%;
+  margin-top: 2%;
+  position: relative;
+  background-color: #f0f0f0;
+  color: #ec6642;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: .5s ease-in-out;
+}
+.bannerText a::before {
+  content: "\f054";
+  position: absolute;
+  top: 29%;
+  right: 8%;
+  font-family: "fontawesome";
+}
+.slick-prev {
+  z-index: 1;
+  left: 7%;
+}
+.slick-next {
+  right: 7%;
+}
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 15px;
+}
+/* Banner Styling End From Here */
+
+/* help Styling End From Here */
+.help .wrapper {
+  padding: 60px 0 100px;
+}
+.help .wrapper p {
+  padding-top: 40px;
+  color: rgba(0,0,0,.6);
+  font-size: 14px;
+  text-align: center;
+  line-height: 25px;
+}
+/* help Styling End From Here */
+
+/* our-services styling Start From Here */
+.our-services ul {
+  margin: 55px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.our-services ul li {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+  text-align: center;
+}
+.our-services li span {
+  margin-top: 30px;
+  color: rgba(0,0,0,.7);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.our-services li figure {
+  transition: .3s ease-in-out;
+}
+.our-services li img {
+  width: auto;
+}
+
+.our-services li:last-child span:nth-child(1)::before {
+  content: "\f061";
+  color: #eb6236;
+  font-size: 25px;
+  font-family: "fontawesome";
+}
+
+/* our-services styling End From Here */
+
+/* our work styling Start From Here */
+.work {
+  padding-top: 66px;
+  background-color: #f0f0f0;
+}
+.work .wrapper {
+  width: 100%;
+}
+.work h5 {
+  padding: 25px 0 45px;
+  color: rgba(0,0,0,.7);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+.work ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.work ul figure {
+  position: relative;
+  cursor: pointer;
+}
+.modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.9);
+}
+.modal figure {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal img {
+  width: 500px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,.3);
+  transition: .5s ease-in-out;
+}
+
+.closeBtn {
+  padding: 8px 30px 8px 10px;
+  margin: 20px;
+  border: none;
+  border-radius: 5px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  outline: none;
+  background-color: #db7a5e;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: .5s ease-in-out;
+}
+.closeBtn span {display: none;}
+
+.closeBtn::before {
+  content: "\f057";
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  font-size: 18px;
+  font-family: "fontawesome";
+}
+
+.show {
+  display: block;
+}
+/* our work styling End From Here */
+
+/* Work-With styling End From Here */
+
+.work-with {
+  padding: 65px 0;
+  background-color: #eb6236;
+}
+.work-with h3 {
+  color: #f0f0f0;
+}
+.work-with ul{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.work-with ul li {
+  padding: 1%;
+  transition: .5s ease-in-out;
+}
+/* Work-With styling End From Here */
+
+/* affiliations styling start From Here */
+
+.affiliations {
+  padding: 70px 0 80px;
+}
+.affiliations ul {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.affiliations ul li {
+  padding: 1%;
+  transition: .6s ease-in-out;
+}
+/* affiliations styling start End Here */
+
+
+/* get-in-touch styling start End Here */
+.get-in-touch {
+  padding: 50px 0 70px;
+  background-color: #003e57;
+}
+.get-in-touch h3 {
+  color: #f0f0f0;
+}
+.get-in-touch form {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  color: #f0f0f0;
+}
+.get-in-touch form .from-group-left,
+.get-in-touch form .from-group-right {
+  width: 48%;
+}
+.input, .textbox,
+.select, .submit {
+  margin: 3% 0;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 8px 0;
+  font-size: 13px;
+}
+label::first-letter {
+  text-transform: uppercase;
+}
+input[type="text"],
+input[type="email"],
+textarea, select {
+  padding: 10px 15px;
+  border: 0;
+  outline: 0;
+  color: rgba(0,0,0,.6);
+}
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder, select {
+  text-transform: capitalize;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus, select:focus {
+  box-shadow: 0 0 10px #000;
+}
+.checkbox div span{
+  color: #ec6642;
+  text-transform: capitalize;
+}
+
+.submit-btn {
+  padding: 2% 6%;
+  border: 0;
+  margin-top: 20px;
+  border-radius: 3px;
+  outline: 0;
+  background-color: #eb6236;
+  color: #f0f0f0;
+  align-self: flex-end;
+  text-transform: capitalize;
+  transition: .5s ease-in-out;
+}
+
+.error {
+  margin-top: 1%;
+  color: #ff0000;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.error.active {
+  color: #00ff00;
+}
+/* get-in-touch styling start End Here */
+
+
+
+/* Join us Page CSS Start */
+
+/* Harvest Styling Start From Here */
+.harvest{
+  padding: 50px 0;
+}
+.harvest h3 {
+  text-align: center;
+}
+.harvest-content{
+  margin-top: 6%;
+  display: flex;
+}
+.harvest-content p{
+  margin-right: 3%;
+  flex-basis: 50%;
+  color: rgba(0,0,0,.5);
+  font-size: 18px;
+  line-height: 25px;
+  text-shadow: 0px 0px 5px rgba(0,0,0,.5);
+}
+.harvest-content figure{
+  flex-basis: 50%;
+}
+
+/* Harvest Styling End From Here */
+
+/* Banner Styling Start From Here */
+
+.banner-joinus .wrapper{
+  padding: 2% 0;
+  text-align: center;
+}
+.banner-joinus h2 {
+  color: #ec6642;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.banner-joinus p{
+  margin: 35px 0;
+  color: rgba(0,0,0,.5);
+  font-size: 20px;
+  line-height: 25px;
+  text-shadow: 0px 0px 5px rgba(0,0,0,.5);
+}
+.banner-joinus a{
+  padding: 8px 3%;
+  background-color: rgba(0,0,0,.1);
+  color: #000;
+  font-size: 14px;
+  text-transform: capitalize;
+  transition: .5s ease-out;
+}
+
+/* Banner Styling End From Here */
+
+/* Benifits Styling Start From Here */
+
+.benifits{
+  padding: 65px 0;
+  background-color: rgba(0,0,0,.1);
+}
+.benifits h3 {
+  text-align: center;
+}
+.benifits ul{
+  margin-top: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.benifits ul li{
+  margin: 1.8%;
+  display: flex;
+  flex-basis: 25%;
+  align-items: center;
+}
+.benifits ul span{
+  color: rgba(0,0,0,.7);
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.benifits ul li::before{
+  content: "\f009";
+  margin-right: 8px;
+  padding: 14px;
+  border-radius: 50%;
+  background-color: #ec6642;
+  color: #fff;
+  font-size: 20px;
+  font-family: "fontawesome";
+}
+
+/* Benifits Styling End From Here */
+
+/* Harvest-Value Styling Start From Here */
+
+.Harvest-Value{
+  padding: 8% 0 4%;
+}
+.Harvest-Value h3 {
+  text-align: center;
+}
+.Harvest-Value ul {
+  margin-top: 6%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Harvest-Value ul li {
+  width: 160px;
+  height: 155px;
+  margin-bottom: 2%;
+  border: 1px solid #ec6642;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,.1);
+}
+.Harvest-Value ul li span{
+  color: #ec6642;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Harvest-Value Styling End From Here */
+
+/* Opportunties Styling Start From Here */
+
+.opportunites{
+  padding: 4% 0 2%;
+}
+
+.searchJob {
+  padding: 5px 0;
+  border: 0;
+  margin: 55px 11% 30px;
+  outline: 0;
+  text-transform: capitalize;
+  cursor: pointer;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
+}
+
+.job {
+  margin: auto 11%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 8px rgba(0,0,0,.5);
+}
+.job li {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.job li:not(:last-child) {
+  border-bottom: 1px solid rgba(0,0,0,.4);
+}
+
+.job li h5 {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.job li h5 span,
+.job li div span:nth-of-type(1) {
+  text-transform: uppercase;
+}
+
+.job li h5,
+.job li div span:last-child {
+  color: #ba9891;
+  font-weight: 600;
+}
+
+.job li div {
+  padding: 0 10px;
+}
+
+.job li div span {
+  padding: 0 2px;
+  position: relative;
+  color: rgba(0,0,0,.5);
+  font-size: 13px;
+  font-family: "fontawesome";
+  text-transform: capitalize;
+}
+
+.job li div span:first-child::before {
+  content: "\f00a";
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.job li div span:nth-of-type(2)::before {
+  content: "\f042";
+  margin-right: 5px;
+}
+
+.job li div span:last-child::before {
+  content: "\f178";
+  position: absolute;
+  right: -9px;
+  top: 30%;
+  font-size: 10px;
+}
+
+.job li.hide {
+  display: none;
+}
+
+/* Opportunites Styling End From Here */
+
+/* Join us Page CSS End */
+
+/* Our Work Page CSS Start */
+
+/* gallery Styling Start From Here */
+.gallery .wrapper {
+  width: 100%;
+  min-width: 100%;
+  margin: 5px;
+}
+.tabs {
+  padding: 40px 20% 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tabs li {
+  border-radius: 3px;
+  margin: 5px 2px;
+}
+.tabs li.active {
+  background-color: #db7a5e;
+  color: #ddd;
+}
+.tabs li span {
+  padding: 5px 8px;
+  margin: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.product {
+  margin-left: 8px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product figure {
+  margin: .3% 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.popUp-image {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.9);
+}
+
+
+.popUp-image figure {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.popUp-image img {
+  width: 500px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,.3);
+  transition: .5s ease-in-out;
+}
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+/* gallery Styling End From Here */
+
+/* Our Work Page CSS End */
+
+
+
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+
+footer {
+  padding: 5% 0 2%;
+  background-color: rgba(0,0,0,.8);
+}
+.touch {
+  margin-right: 11%;
+}
+footer .wrapper>div h4 {
+  color: rgba(255,255,255,.9);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+footer .wrapper>div {
+  display: flex;
+}
+footer .wrapper>div a, address {
+  color: rgba(255,255,255,.6);
+  font-size: 14px;
+  text-transform: capitalize;  
+}
+footer .wrapper>div ul {
+  margin: 18% 0 28%;
+  display: flex;
+  flex-direction: column;
+}
+.touch li:not(:last-child) {
+  margin-bottom: 6%;
+}
+.information li:not(:last-child) {
+  margin-bottom: 8%;
+}
+.touch li a {
+  position: relative;
+  font-family: "fontawesome";
+}
+.touch li:nth-of-type(1) a::before {
+  content: "\f095";
+  position: absolute;
+  top: 0;
+  left: -13%;
+}
+.touch li:nth-of-type(2) a::before {
+  content: "\f0e0";
+  position: absolute;
+  top: 0;
+  left: -13%;
+}
+address {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+address::before {
+  content: "\f276";
+  position: absolute;
+  top: 0;
+  left: -13%;
+  font-family: "fontawesome";
+}
+
+footer h5 {
+  color: rgba(255,255,255,.6);
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.sci {
+  margin-top: 42px;
+}
+.sci,footer h5 {
+  text-align: center;
+}
+.sci a{
+  padding: 6px 8px;
+  margin: 0 1% 0;
+  border-radius: 8px;
+  color: rgba(255,255,255,.6);
+  font-size: 25px;
+  font-family: "fontawesome";
+  transition: .5s ease-in-out;
+}
+.sci span {
+  display: none;
+}
+.sci li:nth-of-type(1) a::before {
+  content: "\f09a";
+}
+.sci li:nth-of-type(2) a::before {
+  content: "\f099";
+}
+.sci li:nth-of-type(3) a::before {
+  content: "\f08c";
+}
+.sci li:nth-of-type(4) a::before {
+  content: "\f16d";
+} 
+
+
+
+
+
+/*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+
+
+/* Media query For Hover Effect */
+@media only screen and (min-width: 995px) {
+  .menu nav li a:hover {
+    color: #ec6642;
+  }
+  .social-links a:hover {
+    color: #2b2b2b;
+  }
+  .bannerText a:hover {
+    background-color: rgba(0,0,0,.6);
+  }
+  .our-services li img:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+  }
+  .our-services li figure:hover {
+    transform: scale(1.3);
+  }
+  .work ul figure:hover::before {
+    content: '\f00e';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(0,0,0,.6);
+    font-size: 40px;
+    font-family: "fontawesome";
+  }
+  .closeBtn:hover {
+    background-color: #ddd;
+    color: #1b1b1b;
+    box-shadow: 0 0 10px rgba(255,255,255,.5);
+  }
+  .modal img:hover {
+    transform: scale(1.1) ;
+  }
+  .work-with ul li:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,.6);
+  }
+  .affiliations ul li:hover {
+    transform: rotate(-360deg);
+    box-shadow: 0 0 5px rgba(0,0,0,.7);
+  }
+  .submit-btn:hover {
+    box-shadow: 0 0 8px #000;
+  }
+  .banner-joinus a:hover{
+    background-color: #000;
+    color: #fff;
+  }
+  .popUp-image img:hover {
+    transform: scale(1.3) ;
+  }
+  .sci a:hover{
+    background-color: #fff;
+    color: #ec6642;
+  }
+  
+}
+
+
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+  .harvest-content {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .harvest-content p {
+    margin: 0% 0 4%;
+  }
+  .searchJob {
+    margin: 55px 0% 30px;
+  }
+  .job {
+    margin: 0;
+  }
+  .job li h5 {
+    font-size: 13px;
+  }
+  .job li div span {
+    font-size: 12px;
+  }
+}
+
+
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+  .menu nav li a {
+    font-size: 12px;
+  }
+  .menu {
+    display: none;
+  }
+  .hamburg {
+    display: block;
+    z-index: 1000;
+  }
+  .banner-joinus a { 
+    font-size: 13px;
+  }
+  .banner-joinus h2 {
+    font-size: 25px;
+  }
+  .banner-joinus p, .harvest-content p {
+    font-size: 15px;
+  }
+  .benifits ul span {
+    font-size: 14px;
+  }
+  .menu.active_menu {
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ddd;
+  }
+  nav ul {
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-links li {
+    margin: 10px;
+  }
+  nav ul li {
+    margin: 15px;
+  }
+  .hamburg {
+    display: block;
+    z-index: 1000;
+  }
+  .hamburg.active_bar::before {
+    content: "\f057";
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    font-size: 25px;
+    font-family: "fontawesome";
+  }
+
+  .bannerText>div h2 {
+    font-size: 14px;
+  }
+  .bannerText>div p {
+    font-size: 12px;
+  }
+}
+
+/*media query for 995px End here*/
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  h3 {
+    font-size: 19px;
+  }
+  .bannerText a::before {
+    top: 23%;
+  }
+  .bannerText a {
+    font-size: 9px;
+  }
+  .slider img {
+    height: 380px;
+  }
+  .our-services ul li {
+    flex-basis: 30%;
+  }
+  .work ul {
+    flex-direction: column;
+  }
+  .work ul li {
+    margin: 2%;
+  }
+  .modal img {
+    width: 100%;
+    height: 100%;
+  }
+  .closeBtn {
+    font-size: 11px;
+  }
+  .get-in-touch form {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .get-in-touch form .from-group-left,
+  .get-in-touch form .from-group-right {
+    width: 100%;
+  }
+
+  .affiliations .wrapper {
+    width: 100%;
+  }
+
+  .benifits ul li::before {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .Harvest-Value ul {
+    justify-content: center;
+  }
+  .Harvest-Value ul li {
+    height: 100px;
+    margin: 2%;
+  }
+  .job li {
+    padding: 10px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .work-with .wrapper {
+    width: 90%;
+  }
+
+  .tabs li span {
+    font-size: 12px;
+  }
+  .tabs {
+    flex-direction: column;
+  }
+  .popUp-image img {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+/*media query for 768px End here*/
+
+/* media query for 540px start from here*/
+
+@media only screen and (max-width: 540px) {
+  h3 {
+    font-size: 18px;
+  }
+  .help .wrapper p, .our-services li span {
+    font-size: 12px;
+  }
+  .bannerText>div h2 {
+    font-size: 10px;
+  }
+  .bannerText>div p {
+    font-size: 8px;
+  }
+  .bannerText a {
+    padding-right: 6%;
+  }
+  .bannerText a::before {
+    top: 22%;
+  }
+  .modal img, .popUp-image img {
+    width:300px;
+    height: 300px;
+  }
+  .touch {
+    margin-right: 0%;
+  }
+  footer .wrapper>div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .closeBtn {
+    font-size: 8px;
+  }
+  .slick-dots li button:before {
+    font-size: 10px;
+  }
+
+}
+/* media query for 540px end from here*/
+
+/* media query for 480px start from here*/
+
+@media only screen and (max-width: 480px) {
+  .bannerText {
+    width: 80%;
+  }
+  .bannerText a {
+    font-size: 8px;
+  }
+  .slider img {
+    height: 275px;
+  }
+  .our-services .wrapper {
+    width: 90%;
+  }
+  .benifits .wrapper {
+    width: 100%;
+  }
+  .benifits ul {
+    justify-content: center;
+  }
+  .benifits ul li {
+    flex-basis: 25%;
+  }
+  .job li div {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+  }
+  .Harvest-Value ul li span {
+    font-size: 11px;
+  }
+}
+
+/* media query for 480px end from here*/
+
+/* media query for 320px end from here*/
+@media only screen and (max-width: 320px) {
+  .bannerText {
+    width: 100%;
+    left: 60%;
+  }
+  .bannerText a {
+    font-size: 7px;
+  }
+  .our-services ul li {
+    flex-basis: 50%;
+  }
+  .modal img, .popUp-image img {
+    width:150px;
+    height:200px;
+  }
+  footer .wrapper>div a, address,footer h5  {
+    font-size: 10px;
+  }
+  .sci a {
+    font-size: 14px;
+  }
+}
+/* media query for 320px end from here*/ 
